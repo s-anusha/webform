@@ -1,0 +1,14 @@
+extends navbar
+
+block content
+  .container(style='padding-top: 50px;')
+    .page-header
+      h1 Delete
+    form#webform.form-horizontal(action='/delete' method='post' style='padding: 25px;')
+      .form-group
+        label.control-label.col-sm-2(for='emailid') Email Id:
+        .col-sm-10
+          input#emailid.form-control(name='emailid' type='email' placeholder='Enter Email Id' required='')
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          button.btn.btn-default(type='submit') Delete

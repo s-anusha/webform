@@ -1,0 +1,29 @@
+extends navbar
+
+block content
+  .container(style='padding-top: 50px;')
+    .page-header
+      h1 Insert
+    form#webform.form-horizontal(action='/insert' method='post' style='padding: 25px;')
+      .form-group
+        label.control-label.col-sm-2(for='username') User Name:
+        .col-sm-10
+          input#username.form-control(name='username' type='text' placeholder='Enter User Name' required='')
+      .form-group
+        label.control-label.col-sm-2(for='password')
+          | Password:
+          br
+          | (Minimum length: 6)
+        .col-sm-10
+          input#password.form-control(name='password' type='password' placeholder='Enter Password' required='' minlength='6' maxlength='50')
+      .form-group
+        label.control-label.col-sm-2(for='emailid') Email Id:
+        .col-sm-10
+          input#emailid.form-control(name='emailid' type='email' placeholder='Enter Email Id' required='')
+      .form-group
+        label.control-label.col-sm-2(for='phonenumber') Phone Number:
+        .col-sm-10
+          input#phonenumber.form-control(name='phonenumber' type='tel' placeholder='Enter Phone Number' required='' maxlength='10')
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          button.btn.btn-default(type='submit') Submit
