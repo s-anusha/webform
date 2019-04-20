@@ -43,17 +43,18 @@ A small REST API, and a webpage
 #### Learnings
 
 - How NodeJS and MySQL work together.
-- Preventing MySQL injections in NodeJS.
-- Parsing MySQL query results database in NodeJS.
+- SQL injections in NodeJS.
+- Parsing MySQL query results in NodeJS.
 - Pug.
 
 #### The challenging part
 
 - Rendering results.
+- Methods.
 
 #### The fun part
 
-- Handling methods.
+- Handling database queries.
 - Front-end.
 
 #### To-do

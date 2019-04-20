@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mysql = require("mysql");
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var methodOverride = require('method-override')
 
 var homeRouter = require('./routes/home');
 var insertRouter = require('./routes/insert');
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
 
 //Database connection
 app.use(function(req, res, next){

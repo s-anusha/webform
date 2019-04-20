@@ -5,7 +5,7 @@ router.get('/', function(req, res, next) {
   res.render('delete');
 });
 
-router.post('/', function(req, res, next) {
+router.delete('/', function(req, res, next) {
 	console.log("Searching the database...");
 	var look = "SELECT * FROM userData WHERE emailid=?";
 	res.locals.connection.query(look, [req.body.emailid], function (error, results, fields) {
@@ -20,7 +20,6 @@ router.post('/', function(req, res, next) {
   				res.locals.connection.query(sql, [req.body.emailid], function (err, result, field) {
     					if (err) throw err;
 					else {
-    						console.log(result.message);
 						console.log("Record deleted.");
 						res.render('result', {message: results[0], outcome: 'Record deleted.'});
 					}

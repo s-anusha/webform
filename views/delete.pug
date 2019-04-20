@@ -4,7 +4,7 @@ block content
   .container(style='padding-top: 50px;')
     .page-header
       h1 Delete
-    form#webform.form-horizontal(action='/delete' method='post' style='padding: 25px;')
+    form#webform.form-horizontal(action='/delete?_method=DELETE' method='post' style='padding: 25px;')
       .form-group
         label.control-label.col-sm-2(for='emailid') Email Id:
         .col-sm-10
