@@ -31,10 +31,10 @@ app.use(methodOverride('_method'))
 //Database connection
 app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
-		host     	: 'localhost',
-		user     	: 'root',
-		password 	: 'root',
-		database 	: 'db_intern'
+		host     	: '',
+		user     	: '',
+		password 	: '',
+		database 	: ''
 	});
 	res.locals.connection.connect();
 	next();
