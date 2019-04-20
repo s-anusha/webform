@@ -22,7 +22,11 @@ router.post('/', function (req, res) {
 			else {
 	            		console.log("Record inserted.");
 				var message = {userName: req.body.username, emailId: req.body.emailid, phoneNo: req.body.phonenumber, password: req.body.password};
-				res.render('result', {message, outcome: 'Record inserted.'});
+				if (results.length > 0)
+					var outcome = 'Record updated.';
+				else
+					var outcome = 'Record inserted.';
+				res.render('result', {message, outcome});
 			}
     		});
 	  }
