@@ -31,10 +31,10 @@ app.use(methodOverride('_method'))
 //Database connection
 app.use(function(req, res, next){
 	res.locals.connection = mysql.createConnection({
-		host     	: '',
-		user     	: '',
-		password 	: '',
-		database 	: ''
+		host     	: 'db-intern.ciupl0p5utwk.us-east-1.rds.amazonaws.com',
+		user     	: 'dummyUser',
+		password 	: 'dummyUser01',
+		database 	: 'db_intern'
 	});
 	res.locals.connection.connect();
 	next();
