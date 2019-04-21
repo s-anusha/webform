@@ -22,6 +22,6 @@ A web app that does three things:
 ## How to run
 - Download/Clone the repo.
 - Setup MySQL database server and table, per the given specs.
-- Add Database connection details in app.js. Also add port number at bin/www.
+- Add Database connection details in 'app.js'. Also add port number at 'bin/www'.
 - At the root, cmd: `npm run start`
 
